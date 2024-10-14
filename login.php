@@ -1,4 +1,5 @@
 <?php
+ob_start();
 @include('layouts/navbar.php');
 @include('includes/connection.php');
 session_start();
@@ -17,12 +18,11 @@ if (isset($_POST['user_login'])) {
             $_SESSION['username'] = $row['username'];
             $_SESSION['email'] = $row['email'];
             $_SESSION['logged_in'] = true;
-
             header('Location: index.php');
-        } else if ($row['verified'] != 1) {
-            // $error[] = "Your account is not verified. Please verify your account first.";
-            $_SESSION['email'] = $row['email'];
-            header('Location: verify.php');
+            exit();
+        } else {
+            header('location: verify.php');
+            exit();
         }
     } else {
         $error[] = "Invalid email or password.";

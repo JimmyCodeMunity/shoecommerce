@@ -1,7 +1,7 @@
 <?php
 @include('layouts/navbar.php');
 @include('includes/connection.php');
-session_start();
+// session_start();
 
 //$email = $_GET['email'];
 date_default_timezone_set('Africa/Nairobi');
@@ -42,6 +42,7 @@ if (isset($_POST['submit'])) {
             $verified = mysqli_query($conn, $verify);
             if ($verified) {
                 header("Location:login.php");
+                exit();
             } else {
                 $error[] = 'Failed to verify your account!';
             }

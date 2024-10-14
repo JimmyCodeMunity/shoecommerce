@@ -1,4 +1,5 @@
 <?php
+ob_start();
 @include('layouts/navbar.php');
 @include('includes/connection.php');
 error_reporting(1);
@@ -37,12 +38,13 @@ if (isset($_POST['create_account'])) {
         } else {
             $insert = "INSERT INTO users(username,email,address,phone,password,otp,expirationtime)VALUES('$username','$email','$address','$phone','$password','$otp','$formattedExpirationTime')";
             $successin = mysqli_query($conn, $insert);
-            $success[] = 'Account created Successfully!';
+            // $success[] = 'Account created Successfully!';
 
             if ($successin) {
-
+                header('location:login.php');
                 require('mail/send.php');
                 sendVerificationEmail($email, $otp, $username);
+                exit();
             }
         }
     }

@@ -12,9 +12,10 @@ if (isset($_POST['edit_product'])) {
     $size = $_POST['size'];
     $color = $_POST['color'];
     $description = $_POST['description'];
+    $category = $_POST['category'];
     
 
-    $insertion = "UPDATE products SET name = '$productname', price = '$price',size = '$size',color = '$color',description = '$description' WHERE id = '$id'";
+    $insertion = "UPDATE products SET name = '$productname', price = '$price',size = '$size',color = '$color',description = '$description',category='$category' WHERE id = '$id'";
     $result = mysqli_query($conn, $insertion);
 
     if ($result) {
@@ -86,6 +87,10 @@ if (isset($_POST['edit_product'])) {
                             <div class="w-full space-y-2">
                                 <label for="" class="text-slate-400">Size</label>
                                 <input name="size" value="<?php echo $row['size'] ?>" placeholder="enter size" type="text" class="h-10 w-full border border-1 border-slate-300 rounded-lg px-4">
+                            </div>
+                            <div class="w-full space-y-2">
+                                <label for="" class="text-slate-400">Category</label>
+                                <input name="category" value="<?php echo $row['category'] ?>" placeholder="enter size" type="text" class="h-10 w-full border border-1 border-slate-300 rounded-lg px-4">
                             </div>
                             <div class="w-full space-y-2">
                                 <label for="" class="text-slate-400">Description</label>

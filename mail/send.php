@@ -10,16 +10,24 @@ function sendVerificationEmail($email,$otp,$username) {
 
     try {
         // Server settings (your existing settings)
+        // $mail->isSMTP();
+        // $mail->Host = 'smtp.gmail.com'; // Replace with your SMTP server
+        // $mail->SMTPAuth = true;
+        // $mail->Username = 'dev.jimin02@gmail.com';
+        // $mail->Password = 'bkyewxhfvizpihlk ';
+        // $mail->SMTPSecure = 'tls';
+        // $mail->Port = 587;
+        
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Replace with your SMTP server
+        $mail->Host = 'mail.haramad.co.ke '; // Replace with your SMTP server
         $mail->SMTPAuth = true;
-        $mail->Username = 'dev.jimin02@gmail.com';
-        $mail->Password = 'bkyewxhfvizpihlk ';
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+        $mail->Username = 'nollybee@haramad.co.ke';
+        $mail->Password = 'nollybee2024';
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
 
         // Recipient
-        $mail->setFrom('dev.jimin02@gmail.com', 'Nollybee');
+        $mail->setFrom('nollybee@haramad.co.ke', 'Nollybee');
         $mail->addAddress($email);
 
         // Content

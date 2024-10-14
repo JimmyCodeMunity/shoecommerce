@@ -1,4 +1,5 @@
 <?php
+ob_start();
 @include('layouts/navbar.php');
 @include('includes/connection.php');
 
@@ -40,7 +41,12 @@ if (isset($_POST['submit'])) {
             $verify = "UPDATE users SET verified = 1 WHERE email = '$uid'";
             $verified = mysqli_query($conn, $verify);
             if ($verified) {
-                header("Location:login.php");
+                $_SESSION['user_id'] = $row['id'];
+                $_SESSION['username'] = $row['username'];
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['logged_in'] = true;
+                header("Location:index.php");
+                exit();
             } else {
                 $error[] = 'Failed to verify your account!';
             }
@@ -77,10 +83,10 @@ if (isset($_POST['resend'])) {
 
         if ($succupdate) {
             
-            require('mail/send.php');
-            echo "new otp sent successfully";
-            $success[] = 'New  OTP has been sent successfully!';
-            sendVerificationEmail($email, $otp, $username, $uid);
+            require('mail/resend.php');
+        sendVerificationEmail($email,$otp,$username);
+        // alert if sent successfull
+        $success[] = 'New verification code sent successfully';
         }
     }
 }

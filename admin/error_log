@@ -1,0 +1,35 @@
+[10-Oct-2024 18:46:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'haramad1_nollybee '@'localhost' (using password: YES) in /home/haramad1/nollybee.haramad.co.ke/admin/includes/connection.php:3
+Stack trace:
+#0 /home/haramad1/nollybee.haramad.co.ke/admin/includes/connection.php(3): mysqli_connect('localhost', 'haramad1_nollyb...', Object(SensitiveParameterValue), 'haramad1_nollyb...')
+#1 /home/haramad1/nollybee.haramad.co.ke/admin/products.php(2): include('/home/haramad1/...')
+#2 {main}
+  thrown in /home/haramad1/nollybee.haramad.co.ke/admin/includes/connection.php on line 3
+[10-Oct-2024 18:46:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'haramad1_nollybee '@'localhost' (using password: YES) in /home/haramad1/nollybee.haramad.co.ke/admin/includes/connection.php:3
+Stack trace:
+#0 /home/haramad1/nollybee.haramad.co.ke/admin/includes/connection.php(3): mysqli_connect('localhost', 'haramad1_nollyb...', Object(SensitiveParameterValue), 'haramad1_nollyb...')
+#1 /home/haramad1/nollybee.haramad.co.ke/admin/products.php(2): include('/home/haramad1/...')
+#2 {main}
+  thrown in /home/haramad1/nollybee.haramad.co.ke/admin/includes/connection.php on line 3
+[10-Oct-2024 18:46:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'haramad1_nollybee '@'localhost' (using password: YES) in /home/haramad1/nollybee.haramad.co.ke/admin/includes/connection.php:3
+Stack trace:
+#0 /home/haramad1/nollybee.haramad.co.ke/admin/includes/connection.php(3): mysqli_connect('localhost', 'haramad1_nollyb...', Object(SensitiveParameterValue), 'haramad1_nollyb...')
+#1 /home/haramad1/nollybee.haramad.co.ke/admin/users.php(2): include('/home/haramad1/...')
+#2 {main}
+  thrown in /home/haramad1/nollybee.haramad.co.ke/admin/includes/connection.php on line 3
+[10-Oct-2024 18:48:22 UTC] PHP Warning:  Undefined array key "id" in /home/haramad1/nollybee.haramad.co.ke/admin/products.php on line 7
+[10-Oct-2024 18:48:22 UTC] PHP Warning:  Undefined array key "action" in /home/haramad1/nollybee.haramad.co.ke/admin/products.php on line 8
+[11-Oct-2024 10:29:38 UTC] PHP Warning:  Undefined array key "id" in /home/haramad1/nollybee.haramad.co.ke/admin/products.php on line 7
+[11-Oct-2024 10:29:38 UTC] PHP Warning:  Undefined array key "action" in /home/haramad1/nollybee.haramad.co.ke/admin/products.php on line 8
+[11-Oct-2024 10:29:41 UTC] PHP Warning:  Undefined variable $row in /home/haramad1/nollybee.haramad.co.ke/admin/addproduct.php on line 95
+[11-Oct-2024 10:29:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/haramad1/nollybee.haramad.co.ke/admin/addproduct.php on line 95
+[11-Oct-2024 10:30:19 UTC] PHP Warning:  Undefined variable $image_name in /home/haramad1/nollybee.haramad.co.ke/admin/addproduct.php on line 11
+[11-Oct-2024 10:30:19 UTC] PHP Deprecated:  basename(): Passing null to parameter #1 ($path) of type string is deprecated in /home/haramad1/nollybee.haramad.co.ke/admin/addproduct.php on line 11
+[11-Oct-2024 10:30:19 UTC] PHP Warning:  Undefined variable $profile_pic in /home/haramad1/nollybee.haramad.co.ke/admin/addproduct.php on line 24
+[11-Oct-2024 10:30:19 UTC] PHP Warning:  Undefined variable $row in /home/haramad1/nollybee.haramad.co.ke/admin/addproduct.php on line 95
+[11-Oct-2024 10:30:19 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/haramad1/nollybee.haramad.co.ke/admin/addproduct.php on line 95
+[11-Oct-2024 10:30:39 UTC] PHP Warning:  Undefined array key "id" in /home/haramad1/nollybee.haramad.co.ke/admin/products.php on line 7
+[11-Oct-2024 10:30:39 UTC] PHP Warning:  Undefined array key "action" in /home/haramad1/nollybee.haramad.co.ke/admin/products.php on line 8
+[11-Oct-2024 10:30:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/haramad1/nollybee.haramad.co.ke/admin/includes/connection.php:1) in /home/haramad1/nollybee.haramad.co.ke/admin/products.php on line 18
+[11-Oct-2024 10:30:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/haramad1/nollybee.haramad.co.ke/admin/includes/connection.php:1) in /home/haramad1/nollybee.haramad.co.ke/admin/products.php on line 18
+[11-Oct-2024 10:31:01 UTC] PHP Warning:  Undefined array key "id" in /home/haramad1/nollybee.haramad.co.ke/admin/products.php on line 7
+[11-Oct-2024 10:31:01 UTC] PHP Warning:  Undefined array key "action" in /home/haramad1/nollybee.haramad.co.ke/admin/products.php on line 8

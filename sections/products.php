@@ -10,7 +10,7 @@ $result = mysqli_query($conn, $select);
         <a href="" class="text-green-500 text-lg">View All</a>
     </div>
 
-    <div class="w-full flex flex-row justify-start">
+    <div class="w-full grid md:grid-cols-4 grid-cols-2 gap-1">
         <?php
         if (mysqli_num_rows(($result)) < 0) {
         ?>
@@ -18,7 +18,7 @@ $result = mysqli_query($conn, $select);
         <?php } else { ?>
             <?php while ($row = mysqli_fetch_array($result)) { ?>
 
-                <div class="grid gap-4 grid-col-4 p-4">
+                <div class="rounded-t-2xl overflow-hidden">
                     <a href="pages/viewproduct.php?id=<?php echo $row['id']?>" class="w-full">
                         <img src="admin/images/<?php echo $row['image'] ?>" class="w-60 h-60" alt="productimage">
                         <div>

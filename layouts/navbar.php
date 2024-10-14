@@ -1,7 +1,8 @@
 <?php
 @include('../includes/connection.php');
 session_start();
-// if ($_SESSION['logged_in'] == true) {
+
+// if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
 //   echo "User logged in",$_SESSION['username'];
 // }
 ?>
@@ -38,7 +39,7 @@ session_start();
         <div>
           <h3 class="text-white text-2xl font-effect-glow">NollyBee</h3>
         </div>
-        <div>
+        <div class="hidden md:block">
           <ul class="flex flex-row space-x-4">
             <li><a href="index.php" class="text-white text-sm">Home</a></li>
             <li><a href="" class="text-white text-sm">About</a></li>
@@ -48,7 +49,7 @@ session_start();
           </ul>
         </div>
       </div>
-      <div class="flex flex-row items-center">
+      <div class="hidden md:flex flex-row items-center">
         <ul class="flex flex-row items-center space-x-4">
           <li><a href="" class="text-white text-sm"><i class="fa fa-envelope"></i> shoppo@gmail.com</a></li>
           <li><a href="" class="text-white text-sm"><i class="fa fa-phone"></i> +254112123423</a></li>
@@ -61,16 +62,17 @@ session_start();
 
   </nav>
   <div class="w-full px-6 md:px-16 md:py-5 py-2 bg-gray-800 justify-between items-center flex flex-row">
-    <div>
+    <div class="md:block hidden">
       <p class="text-white text-sm">Shop by category</p>
     </div>
     <div class="bg-slate-600 h-8 rounded-lg px- flex relative md:w-[400px]">
       <input type="text" class="bg-slate-600 text-white h-8 w-full focus:border-0 px-4 rounded-lg"
         placeholder="Search....">
-      <button class="bg-green-400 text-white h-8 rounded-lg px-4 absolute right-0">Search</button>
+      <button class="bg-green-400 md:block hidden text-white h-8 rounded-lg md:px-4 px-2 absolute right-0">Search</button>
+      <button class="bg-green-400 md:hidden block text-white h-8 rounded-lg md:px-4 px-2 absolute right-0"><i class="fa fa-search"></i></button>
     </div>
 
-    <div class="flex flex-row items-center space-x-5">
+    <div class="flex-row items-center space-x-5 hidden md:flex">
 
       <?php
       if ($_SESSION['logged_in'] == false) { ?>

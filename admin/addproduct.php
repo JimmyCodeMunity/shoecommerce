@@ -7,6 +7,7 @@ if (isset($_POST['create_product'])) {
     $size = $_POST['size'];
     $color = $_POST['color'];
     $description = $_POST['description'];
+    $category = $_POST['category'];
     $path = "images/" . basename($image_name);
 
     $image_name = $_FILES["productimage"]["name"];
@@ -28,7 +29,7 @@ if (isset($_POST['create_product'])) {
 
     move_uploaded_file($profile_pic_tmp_name, $target);
 
-    $insertion = "INSERT INTO products (name, price,size,color,image,description) VALUES ('$productname', '$price','$size','$color','$profile_pic','$description')";
+    $insertion = "INSERT INTO products (name, price,size,color,image,description,category) VALUES ('$productname', '$price','$size','$color','$profile_pic','$description','$category')";
     $result = mysqli_query($conn, $insertion);
 
     if ($result) {
@@ -88,6 +89,10 @@ if (isset($_POST['create_product'])) {
                             <div class="w-full space-y-2">
                                 <label for="" class="text-slate-400">Size</label>
                                 <input name="size" placeholder="enter size" type="text" class="h-10 w-full border border-1 border-slate-300 rounded-lg px-4">
+                            </div>
+                            <div class="w-full space-y-2">
+                                <label for="" class="text-slate-400">Category</label>
+                                <input name="category" value="<?php echo $row['category'] ?>" placeholder="enter size" type="text" class="h-10 w-full border border-1 border-slate-300 rounded-lg px-4">
                             </div>
                             <div class="w-full space-y-2">
                                 <label for="" class="text-slate-400">Description</label>
